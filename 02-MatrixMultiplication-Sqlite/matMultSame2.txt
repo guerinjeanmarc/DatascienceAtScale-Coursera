@@ -1,0 +1,4 @@
+select a.row_num, a.row_num, sum(a.value*a.value) 
+from a
+where a.col_num = a.col_num
+group by a.row_num, a.row_num;

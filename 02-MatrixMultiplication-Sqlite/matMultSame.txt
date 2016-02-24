@@ -1,0 +1,5 @@
+create view sim as
+select freqview.docid, freqview2.docid, sum(freqview.count*freqview2.count) 
+from freqview, freqview2
+where freqview.term = freqview2.term
+group by freqview.docid, freqview2.docid;
